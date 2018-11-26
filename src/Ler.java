@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Ler {
@@ -19,10 +20,18 @@ public class Ler {
         while (linha != null) {
             palavras.add(linha); 
             linha = texto.readLine();
+        }        
+        
+        System.out.print("Antes do Shuffle: ");
+        for (int i = 0; i < 10; i++) {
+        	System.out.println(palavras.get(i));
         }
         
+        Collections.shuffle(palavras);
+        
+        System.out.print("Depois do Shuffle: ");
         for (int i = 0; i < 10; i++) {
-        	System.out.print(palavras.get(i));
+        	System.out.println(palavras.get(i));
         }
         
         texto.close();
