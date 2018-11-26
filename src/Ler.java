@@ -33,7 +33,9 @@ public class Ler {
         for (int i = 0; i < 10; i++) {
         	System.out.println(palavras.get(i));
         }
-        
+        System.out.println("Tamanho ANTES: " + palavras.size());
+        palavras.clear();
+        System.out.println("Tamanho DEPOIS: " + palavras.size());
         texto.close();
     }
     
